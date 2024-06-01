@@ -1,54 +1,45 @@
 body {
-    background-color: #242424;
+    font-family: Arial, sans-serif;
+}
+
+#search-container {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 300px;
     padding: 10px;
-    border-radius: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-main {
-    direction: column;
-    gap: 20px;
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-query {
-    width: 520px;
-    height: 5px;
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#results-container {
+    display: none;
+}
+
+#results-list {
+    list-style: none;
+    padding: 0;
+}
+
+#results-list li {
+    margin-bottom: 10px;
     padding: 10px;
-    font-size: 20px;
-}
-
-submain {
-    direction: column;
-    gap: 10px;
-}
-
-card {
-    opacity: 0.0;
-
-    direction: column;
-    padding: 10px;
-    border-radius: 12px;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-    gap: 5px;
-}
-
-a {
-    font-family: Cascadia Code;
-    letter-spacing: 4px;
-    font-size: 12px;
-}
-
-p {
-    font-family: Corbel;
-    font-size: 12px;
-}
-
-domain {
-    font-family: Cascadia Code;
-    font-size: 9px;
-}
-subheader {
-    font-family: Cascadia Code;
-    color: gainsboro;
+    background-color: #f4f4f4;
+    border-radius: 5px;
 }
