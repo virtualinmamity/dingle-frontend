@@ -5,12 +5,13 @@ function fetchResults(query)
         url = url,
         method = "GET"
     })
+    print("Fetched results: " .. response)
     return response
 end
 
 -- Function to display search results on the webpage
 function displayResults(results)
-    local resultsList = get("#results-list")
+    local resultsList = get("ul")
     resultsList.clear() -- Clear existing results
 
     -- Split results by newline character
@@ -24,13 +25,13 @@ function displayResults(results)
     end
 
     -- Show the results container
-    local resultsContainer = get("#results-container")
+    local resultsContainer = get("div", true)[2]
     resultsContainer.style.display = "block"
 end
 
 -- Event listener for search button click
-get("#search-button").on_click(function()
-    local query = get("#search-input").get_value()
+get("button").on_click(function()
+    local query = get("input").get_value()
     local results = fetchResults(query)
     displayResults(results)
 end)
